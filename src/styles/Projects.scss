@@ -1,0 +1,150 @@
+@import './global.scss';
+
+#section__projects{
+    position: relative; 
+    padding-top: 100px; 
+    width: 100%;
+    min-height: 100vh;
+
+    #return {
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-decoration: none;
+        color: $text-main;
+        font-family: $font_style;
+        font-size: 13px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+
+        &:hover {
+            color: $pink;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    .project-list{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        color: $text-main;
+        gap: 20px;
+        padding: 20px;
+        &>*{
+            border: 1px solid $navy-light;
+            border-radius: 20px;
+            padding: 15px;
+            background-color: $navy-light;
+        }
+        &>*:hover{
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.5s ease-in-out;
+        }
+    }
+
+    input{
+        border: 1px solid $navy-light;
+        background-color: $navy-light;
+        border-radius: 23px;
+        padding: 10px;
+        margin-top: 10px;
+    }
+    
+    .search{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+    }
+    
+    #linkgit{
+        cursor: pointer;
+        font-style: italic;
+    }
+    
+    h3{
+        font-family: $bigtitlefont;
+        font-weight: 700;
+        margin-bottom: 7px;
+    }
+    
+    #pproject{
+        margin-bottom: 10px;
+    }
+
+    a{
+        color: $pink;
+        font-size: 14px;
+    }
+
+    a:hover{
+        color: $title_color;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+
+@media(max-width: 1024px){
+    .search{
+        justify-content: right;
+    }
+}
+
+@media(max-width: 768px){
+    #section__projects{
+        padding-top: 80px;
+        .search{
+            display: grid;
+            justify-content: center;
+            gap: 5px;
+        }
+    
+        .search h2{
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .search h3{
+            font-size: 16px;
+        }
+    
+        .project-list{
+            display: inline;
+        }
+
+        #return{
+            top: 20px;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            width: 100%;
+            text-align: center;
+        }
+    
+        .project-list .project-card{
+            margin-bottom: 20px;
+        }
+    
+        .project-list .project-card h3{
+            font-size: 16px;
+        }
+    
+        .project-list .project-card p{
+            font-size: 12px;
+        }
+
+        &>*{
+            padding: 10px;
+        }
+    
+        a{
+            font-size: 11px;
+        }
+    
+        Footer{
+            font-size: 12px;
+        }
+    }
+}

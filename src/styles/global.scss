@@ -1,0 +1,175 @@
+@import './variables';
+
+@view-transition {navigation: auto;}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation-duration: 0.5s;
+}
+
+body{
+    background-color: $background_color;
+    margin: 0;
+    font-family: $font_style;
+
+}
+
+
+header h1{
+    font-family: $bigtitlefont;
+    color: $pink;
+    .header a{
+        color: $text-main;
+        font-family: $font_style;
+        text-transform: uppercase;
+    }
+}
+
+#burger-menu{
+    display: none;
+}
+
+h2, main h1{
+    font-family: $bigtitlefont;
+    color: $text-main;
+} 
+
+a{
+    text-decoration: none;
+    color: $text-main;
+    font-family: $font_style;
+    &:hover{
+        font-size: 18px;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+#sectionHome .presentation:hover{
+    background-color: $navy-light;
+    transition: all 0.3s ease-in-out;
+}
+
+main div, main .Formations .formarticle, footer{
+    border: 1px;
+    border-radius: 14px;
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 1200px;
+    font-family: $font_style;
+}
+
+#sectionHome  main .presentation:hover, main .langages-informatiques:hover, footer:hover{
+    background-color: $navy-light;
+    transition: all 0.3s ease-in-out;
+}
+
+#sectionHome .Formations .formarticle:hover{
+    transform: scale(1.05);
+    z-index: 10;
+    transition: all 0.6s ease-in-out;
+}
+
+main p, main ul{
+    color: $title-color;
+    font-size: 16px;
+    font-family: $font_style;
+} 
+
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+footer{
+    color: $title-color;
+    align-items: center;
+    text-align: center;
+    font-family: $font_style;
+    #burger-menu{
+        display: none;
+    }
+}
+
+
+@media(max-width: 1024px){
+    .header {
+        display: none;
+        flex-direction: column;
+    }
+
+    #burger-menu{
+        display: block;
+    }
+
+    #navdiv{
+        align-items: center;
+    }
+
+    .header.show {
+        display: flex;
+        margin-top: 10px;
+        background-color: $text-main;
+        border-radius: 13px;
+        padding-right: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    
+    a{
+        color: $pink;
+    }
+}
+
+@media(hover: hover) and (max-width: 768px){
+    header{
+        display: inline;
+        text-align: center;
+    }
+    
+    header h1{
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    #navdiv{
+        justify-items: center;
+    }
+    
+    main h2{
+        font-size: 14px;
+    }
+    
+    main p{
+        font-size: 12px;
+    }
+    
+    .Formations .formarticle h2, .Formations .formarticle span{
+        font-size: 12px;
+    }
+    
+    .Formations .formarticle{
+        width: 200px;
+    }
+    
+    .Formations .formarticle ul li{
+        font-size: 12px;
+    }
+    
+    #sectionHome .Formations .formarticle .desc{
+        font-size: 10px;
+    }
+
+    #sectionHome .langages-informatiques .icons{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
+    #sectionHome .Formations{
+        display: inline;
+    }
+    
+    #sectionHome .Formations .formarticle{
+        width: 300px;
+    }
+}
