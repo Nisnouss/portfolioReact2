@@ -11,9 +11,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({title, description, link, link
     <div className="project-card">
         <h3>{title}</h3>
         <p id="pproject">{description}</p>
-        <a id="linkgit" target="_blank" href={link}>Lien vers un premier projet <FaExternalLinkAlt /></a>
-        <br />
-        <a id="linkgit" target="_blank" href={link2}>Lien vers un second projet <FaExternalLinkAlt /></a>
+        <div className="link-project">
+            <article>
+                <a id="linkgit" target="_blank" href={link}>Lien vers un premier projet <FaExternalLinkAlt /></a>
+            </article>
+            <article>
+                <a id="linkgit" target="_blank" href={link2}>Lien vers un second projet <FaExternalLinkAlt /></a>
+            </article>
+            </div>
     </div>
 );
 

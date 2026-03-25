@@ -63,6 +63,7 @@
     #linkgit{
         cursor: pointer;
         font-style: italic;
+        font-size: 14px;
     }
     
     h3{
@@ -83,6 +84,12 @@
     a:hover{
         color: $title_color;
         transition: all 0.3s ease-in-out;
+    }
+
+    .link-project{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
     }
 }
 
